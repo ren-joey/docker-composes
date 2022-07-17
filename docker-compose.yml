@@ -1,20 +1,10 @@
-version: '3.8'
-
+version: "3.8"
 services:
   app:
-    build:
-      context: ./
-      dockerfile: Dockerfile
-    container_name: app
-    restart: always
-    volumes:
-      - ./app:/var/www
-  nginx:
-    image: nginx:stable
-    container_name: nginx
-    restart: always
+    build: ./laravel/
+    # image: ubuntu/nginx
     ports:
-      - 8000:80
+      - 8000:8000
     volumes:
-      - ./app:/var/www
-      - ./nginx/conf.d:/etc/nginx/conf.d
+      - ./nginx/conf.d/:/etc/nginx/conf.d/
+      - ./laravel/:/var/www/html/
