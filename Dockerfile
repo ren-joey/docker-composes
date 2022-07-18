@@ -1,4 +1,4 @@
-FROM php:8.1-fpm
+FROM php:7.4-fpm
 
 # Copy composer.lock and composer.json
 # COPY ./laravel/composer.json /var/www/
