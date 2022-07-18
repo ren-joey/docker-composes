@@ -43,5 +43,12 @@ COPY . /var/www
 # Copy existing application directory permissions
 COPY --chown=www:www . /var/www
 
+RUN whoami
+
 # Change current user to www
 USER www
+
+RUN whoami
+
+# Copy composer.lock and composer.json
+COPY ./laravel/composer.json /var/www/
