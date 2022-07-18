@@ -7,8 +7,8 @@ services:
       dockerfile: Dockerfile
     container_name: app
     restart: always
-    volumes:
-      - ./laravel:/var/www
+    # volumes:
+      # - ./laravel:/var/www
     networks:
       - app-network
 
