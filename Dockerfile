@@ -42,7 +42,7 @@ COPY . /var/www
 
 # Copy existing application directory permissions
 # COPY --chown=www:www . /var/www
-RUN chmod -R www:www .
+RUN chown -R www:www .
 
 RUN whoami
 
