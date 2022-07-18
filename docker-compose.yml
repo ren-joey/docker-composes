@@ -32,9 +32,9 @@ services:
       - 3306:3306
     environment:
       MYSQL_DATABASE: laravel
-      MYSQL_ROOT_PASSWORD: axTUPrDyaS
-      # MYSQL_USER: joey
-      # MYSQL_PASSWORD: axTUPrDyaS
+      MYSQL_ROOT_PASSWORD: vRbEvjhspc
+      MYSQL_USER: joey
+      MYSQL_PASSWORD: DyVPoJzZ4Y
       SERVICE_TAGS: dev
       SERVICE_NAME: mysql
     volumes:
