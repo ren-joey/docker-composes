@@ -16,6 +16,7 @@ RUN apt-get update && apt-get install -y \
     git \
     curl \
     libonig-dev \
+    libzip-dev \
     net-tools
 
 # Clear cache
