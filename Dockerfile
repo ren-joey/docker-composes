@@ -41,16 +41,8 @@ RUN useradd -u 1000 -ms /bin/bash -g www www
 COPY ./laravel /var/www
 
 # Copy existing application directory permissions
-# COPY --chown=www:www . /var/www
-RUN chown -R www:www /var/www
-
-RUN whoami
+COPY --chown=www:www ./laravel /var/www
+# RUN chown -R www:www /var/www
 
 # Change current user to www
 USER www
-
-RUN whoami
-
-# Copy composer.lock and composer.json
-# COPY ./laravel/composer.json /var/www/
-RUN composer install
