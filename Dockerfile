@@ -1,7 +1,7 @@
 FROM php:8.1-fpm
 
 # Copy composer.lock and composer.json
-COPY ./laravel/composer.json /var/www/
+# COPY ./laravel/composer.json /var/www/
 
 WORKDIR /var/www
 
@@ -32,6 +32,7 @@ RUN docker-php-ext-install gd
 
 # Install composer
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
+RUN composer install
 
 # Add user for laravel application
 RUN groupadd -g 1000 www
